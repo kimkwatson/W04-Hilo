@@ -1,18 +1,18 @@
 # W04-Hilo
 This is a simple game of hilo, where you guess what the next card will be! Here is how the game is played:
-The dealer draws and displays a card. Then, you guess if the next card drawn will be higher or lower than the current one
-displayed. The dealer draws and displays another card. If your guess is correct, you earn 100 points. Otherwise, you lose
-75 points. If you reach 0 points, the game is over.
+The dealer draws and displays a card. Then, you guess if the next card drawn will be higher or lower than the current one.
+The dealer draws and displays another card. If your guess is correct, you earn 100 points. Otherwise, you lose 75 points.
+If you reach 0 points, the game is over.
 
 ## Getting Started
 ---
 Make sure you have Python 3.8.0 or newer installed and running on your machine. Open a terminal and 
 browse to the project's root folder. Start the program by running the following command.
 ```
-python3 dice 
+py hilo
 ```
 You can also run the program from an IDE like Visual Studio Code. Start your IDE and open the 
-project folder. Select the main module inside the dice folder and click the "run" button.
+project folder. Select the main module inside the hilo folder and click the "run" button.
 
 ## Game Design
 ---
@@ -48,7 +48,7 @@ Behaviors:          State:
 The project files and folders are organized as follows:
 ```
 root                    (project root folder) ("W04-HILO")
-+-- dice                (source code for game) ("hilo")
++-- hilo                (source code for game) ("hilo")
   +-- game              (specific classes) ("game")
   +-- __main__.py       (program entry point) ("__main__.py")
 +-- README.md           (general info)

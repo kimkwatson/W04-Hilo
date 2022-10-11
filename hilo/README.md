@@ -16,32 +16,38 @@ project folder. Select the main module inside the hilo folder and click the "run
 
 ## Game Design
 ---
-Object: Dealer                      ``` Class: Dealer
+Object: Director                      
 
-Responsibility:                         score: integer
-- to control the sequence of play       card: string
-                                        guess: string
-Behaviors:          State:              playing: boolean
-- play game         - playing
-- track score       - score
-- show card         - card              draw_card(): None
-- ask hi or lo      - guess             track_score(): None
-- end game          - end               display_card(): None
-                                        end_game(): None
+Responsibility:                         
+- to control the sequence of play       
+                                        
+Behaviors:                    
+- play game         
+- track score       
+- draw card                                        
+- end game                        
 
 ---
-Object: Deck                        ``` Class: Deck
+Object: Player                        
 
-Responsibility:                         deck: list
-- to keep track of which cards          current_card: integer
-are available/are being drawn           previous_card: integer
-                                        points: integer
-Behaviors:          State:
-- hold deck         - deck    
-- draw new card     - current card      hold_deck(): None
-- determine hi/lo   - previous card     draw_card(): None
-- score points      - points            compare_cards(): None
-                                        score_points(): None
+Responsibility:                         
+- to keep track of guess and points     
+                                        
+                                        
+Behaviors:          
+- guess higher or lower                            
+- increase points if correct            
+- decrease points if correct            
+- keep track of score 
+
+---
+Object: Card                      
+
+Responsibility:                         
+- to keep track of which card is drawn       
+                                        
+Behaviors:                    
+- draw card from deck          
 
 ## Project Structure
 ---
@@ -50,6 +56,9 @@ The project files and folders are organized as follows:
 root                    (project root folder) ("W04-HILO")
 +-- hilo                (source code for game) ("hilo")
   +-- game              (specific classes) ("game")
+  +-- director          (class)
+  +-- player            (class)
+  +-- card              (class)
   +-- __main__.py       (program entry point) ("__main__.py")
 +-- README.md           (general info)
 ```
